@@ -8,36 +8,42 @@ const companions = [
     blurb: "The first one. Loyal beyond reason, always waiting at the door. Some bonds don't need words.",
     dateRange: "2005–2017",
     accentColor: "chapter-amber",
+    memoryLine: "He always knew when you needed him most.",
   },
   {
     name: "Luna",
     blurb: "Queen of the couch and guardian of all naps. She chose us — not the other way around.",
     dateRange: "2012–present",
     accentColor: "chapter-lavender",
+    memoryLine: "The softest purr in every quiet moment.",
   },
   {
     name: "Mochi",
     blurb: "Small, chaotic, and absolutely convinced the world revolves around treat time.",
     dateRange: "2018–present",
     accentColor: "chapter-coral",
+    memoryLine: "Tiny paws, enormous personality.",
   },
   {
     name: "Oliver",
     blurb: "The quiet one. Preferred windowsills and warm laundry over anything else in life.",
     dateRange: "2010–2020",
     accentColor: "chapter-sage",
+    memoryLine: "Always found in a patch of sunlight.",
   },
   {
     name: "Pepper",
     blurb: "Arrived unexpectedly, stayed permanently. Expert at stealing socks and hearts equally.",
     dateRange: "2021–present",
     accentColor: "chapter-sky",
+    memoryLine: "The one who made every room feel less empty.",
   },
   {
     name: "Rosie",
     blurb: "The gentle giant. Afraid of thunderstorms, brave about everything else.",
     dateRange: "2015–present",
     accentColor: "chapter-rose",
+    memoryLine: "She leaned into you like you were her whole world.",
   },
 ];
 
@@ -46,7 +52,7 @@ const Companions = () => (
     <motion.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 0.3, duration: 0.6 }}
+      transition={{ delay: 0.3, duration: 0.7 }}
       className="text-sm text-muted-foreground/60 font-light italic mb-10 -mt-4"
     >
       Every life needs a few good paws.
@@ -61,7 +67,7 @@ const Companions = () => (
     <motion.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1, duration: 0.6 }}
+      transition={{ delay: 1.2, duration: 0.7 }}
       className="text-center text-xs text-muted-foreground/50 font-light italic mt-16"
     >
       more companions to come…

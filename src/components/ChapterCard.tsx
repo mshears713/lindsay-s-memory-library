@@ -41,6 +41,55 @@ const accentMap: Record<string, { bg: string; text: string; glow: string; line: 
   },
 };
 
+/** Chapter-specific hover signature elements */
+const chapterSignatures: Record<string, React.ReactNode> = {
+  "/wall": (
+    /* Sketchbook — faint pencil sketch lines */
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+      <svg className="absolute bottom-3 right-3 w-16 h-16 text-chapter-coral/20" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="0.8">
+        <path d="M8 56 L20 12 L24 14 L12 58 Z" />
+        <path d="M20 12 L22 8 L26 10 L24 14 Z" />
+        <line x1="28" y1="42" x2="52" y2="42" strokeDasharray="2 3" />
+        <line x1="28" y1="48" x2="46" y2="48" strokeDasharray="2 3" />
+      </svg>
+    </div>
+  ),
+  "/timeline": (
+    /* Chronicles — thin timeline node */
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+      <div className="absolute right-5 top-4 bottom-4 w-px bg-chapter-sky/20" />
+      <div className="absolute right-[18px] top-1/3 w-1.5 h-1.5 rounded-full bg-chapter-sky/30" />
+      <div className="absolute right-[18px] top-2/3 w-1.5 h-1.5 rounded-full bg-chapter-sky/30" />
+    </div>
+  ),
+  "/pets": (
+    /* Companions — soft paw print */
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+      <span className="absolute bottom-3 right-4 text-xl opacity-20 select-none">🐾</span>
+    </div>
+  ),
+  "/mood": (
+    /* Reflections — soft gradient shimmer */
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-chapter-sage/5 via-transparent to-chapter-sage/8 rounded-2xl" />
+    </div>
+  ),
+  "/lindsay-only": (
+    /* Restricted Area — playful comic micro-glitch */
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
+      <div className="absolute top-2 right-3 text-[9px] font-mono text-chapter-lavender/30 tracking-widest animate-pulse select-none">⚠</div>
+      <div className="absolute bottom-4 left-8 w-8 h-px bg-chapter-lavender/15 animate-pulse" style={{ animationDelay: "0.3s" }} />
+    </div>
+  ),
+  "/audiology": (
+    /* Research Wing — clean clinical accent */
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
+      <div className="absolute top-3 right-3 bottom-3 w-px bg-chapter-amber/15" />
+      <div className="absolute bottom-3 left-6 right-6 h-px bg-chapter-amber/10" />
+    </div>
+  ),
+};
+
 interface ChapterCardProps {
   title: string;
   subtitle?: string;
@@ -57,7 +106,7 @@ const ChapterCard = ({ title, subtitle, icon: Icon, to, accentColor = "chapter-a
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
     >
       <Link to={to} className="group block">
         <div className="relative overflow-hidden rounded-2xl bg-card/80 backdrop-blur-sm border border-border/60 p-6 md:p-8 transition-all duration-500 hover:shadow-xl hover:shadow-foreground/5 hover:-translate-y-1.5 hover:border-border">
@@ -68,6 +117,9 @@ const ChapterCard = ({ title, subtitle, icon: Icon, to, accentColor = "chapter-a
           <div
             className={`absolute -top-16 -right-16 w-40 h-40 ${colors.glow} rounded-full blur-3xl opacity-0 group-hover:opacity-80 transition-opacity duration-700`}
           />
+
+          {/* Chapter signature preview */}
+          {chapterSignatures[to]}
 
           {/* Icon */}
           <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl ${colors.bg} mb-5 transition-all duration-500 group-hover:scale-110 group-hover:shadow-md`}>
