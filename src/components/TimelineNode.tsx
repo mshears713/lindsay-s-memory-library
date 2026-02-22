@@ -81,7 +81,7 @@ const TimelineNode = ({
       <motion.div
         initial={{ opacity: 0, x: isEven ? -30 : 30, y: 8 }}
         animate={isInView ? { opacity: 1, x: 0, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+        transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
         className={`relative w-[calc(50%-2rem)] ${isEven ? "mr-auto pr-6" : "ml-auto pl-6"}`}
       >
         {/* Connector line from card to dot */}

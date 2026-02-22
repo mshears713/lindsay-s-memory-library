@@ -41,6 +41,7 @@ interface PetCardProps {
   dateRange?: string;
   accentColor?: string;
   index?: number;
+  memoryLine?: string;
 }
 
 const PetCard = ({
@@ -50,6 +51,7 @@ const PetCard = ({
   dateRange,
   accentColor = "chapter-amber",
   index = 0,
+  memoryLine,
 }: PetCardProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
@@ -60,7 +62,7 @@ const PetCard = ({
       ref={ref}
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.7, delay: index * 0.12, ease: "easeOut" }}
       className="group"
     >
       <div
@@ -109,6 +111,13 @@ const PetCard = ({
           {blurb && (
             <p className="mt-2 text-sm text-muted-foreground font-light leading-relaxed">
               {blurb}
+            </p>
+          )}
+
+          {/* Emotional memory line — revealed on hover */}
+          {memoryLine && (
+            <p className="mt-3 text-xs text-muted-foreground/0 group-hover:text-muted-foreground/70 font-light italic leading-relaxed transition-all duration-700 translate-y-1 group-hover:translate-y-0">
+              "{memoryLine}"
             </p>
           )}
         </div>
