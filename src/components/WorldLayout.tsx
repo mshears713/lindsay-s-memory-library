@@ -11,12 +11,13 @@ const WorldLayout = ({ children }: WorldLayoutProps) => {
   const isHome = location.pathname === "/";
 
   return (
-    <div className="relative min-h-screen bg-background overflow-hidden">
+    <div className="relative min-h-screen bg-background bg-grain bg-vignette overflow-hidden">
       {/* Ambient background texture */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-glow/5 rounded-full blur-3xl animate-glow-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-chapter-sage/8 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/3 right-1/6 w-64 h-64 bg-chapter-rose/5 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "4s" }} />
+        <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-glow/6 rounded-full blur-[100px] animate-glow-pulse" />
+        <div className="absolute bottom-[-10%] right-1/4 w-[420px] h-[420px] bg-chapter-sage/8 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/3 right-[10%] w-[320px] h-[320px] bg-chapter-rose/5 rounded-full blur-[80px] animate-glow-pulse" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-[60%] left-[8%] w-[260px] h-[260px] bg-chapter-sky/4 rounded-full blur-[90px] animate-glow-pulse" style={{ animationDelay: "6s" }} />
       </div>
 
       {/* Navigation */}

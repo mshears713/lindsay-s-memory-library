@@ -60,14 +60,17 @@ const ChapterCard = ({ title, subtitle, icon: Icon, to, accentColor = "chapter-a
       transition={{ duration: 0.5, delay: index * 0.08, ease: "easeOut" }}
     >
       <Link to={to} className="group block">
-        <div className="relative overflow-hidden rounded-2xl bg-card border border-border p-6 md:p-8 transition-all duration-500 hover:shadow-lg hover:shadow-glow/10 hover:-translate-y-1">
+        <div className="relative overflow-hidden rounded-2xl bg-card/80 backdrop-blur-sm border border-border/60 p-6 md:p-8 transition-all duration-500 hover:shadow-xl hover:shadow-foreground/5 hover:-translate-y-1.5 hover:border-border">
+          {/* Spine accent — like a book binding */}
+          <div className={`absolute top-3 bottom-3 left-0 w-[3px] rounded-full ${colors.line} opacity-60 group-hover:opacity-100 transition-opacity duration-500`} />
+
           {/* Accent glow on hover */}
           <div
-            className={`absolute -top-12 -right-12 w-32 h-32 ${colors.glow} rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+            className={`absolute -top-16 -right-16 w-40 h-40 ${colors.glow} rounded-full blur-3xl opacity-0 group-hover:opacity-80 transition-opacity duration-700`}
           />
 
           {/* Icon */}
-          <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl ${colors.bg} mb-5 transition-transform duration-500 group-hover:scale-110`}>
+          <div className={`inline-flex items-center justify-center w-11 h-11 rounded-xl ${colors.bg} mb-5 transition-all duration-500 group-hover:scale-110 group-hover:shadow-md`}>
             <Icon className={`w-5 h-5 ${colors.text}`} />
           </div>
 
