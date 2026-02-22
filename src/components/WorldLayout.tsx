@@ -22,10 +22,13 @@ const WorldLayout = ({ children }: WorldLayoutProps) => {
 
       {/* Navigation */}
       <nav className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <BookOpen className="w-5 h-5 text-primary transition-transform group-hover:scale-110" />
-          <span className="font-display text-lg font-medium text-foreground tracking-tight">
-            Lindsay's Memory Library
+        <Link to="/" className="flex items-center gap-3 group">
+          {/* Future logo placeholder */}
+          <div className="w-6 h-6 rounded-md border border-border/50 flex items-center justify-center bg-card/60 backdrop-blur-sm transition-all duration-500 group-hover:border-primary/30 group-hover:shadow-sm">
+            <BookOpen className="w-3.5 h-3.5 text-primary/70 transition-transform duration-500 group-hover:scale-110" />
+          </div>
+          <span className="font-display text-sm font-medium text-muted-foreground tracking-wide uppercase">
+            The Lindsay Archive
           </span>
         </Link>
 
