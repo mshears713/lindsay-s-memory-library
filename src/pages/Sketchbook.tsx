@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageContainer from "@/components/PageContainer";
 import artifactImage from "@/assets/quest-list-artifact.jpg";
@@ -10,6 +10,7 @@ interface Hotspot {
   width: string;
   height: string;
   note: string;
+  special?: "chipmunk";
 }
 
 const hotspots: Hotspot[] = [
@@ -54,6 +55,15 @@ const hotspots: Hotspot[] = [
     note: "Own a chipmunk. Non-negotiable life goal.",
   },
   {
+    id: "mike-chipmunk",
+    top: "75%",
+    left: "3%",
+    width: "65%",
+    height: "7%",
+    note: "🐿️ Click to see what Mike actually got…",
+    special: "chipmunk",
+  },
+  {
     id: "movie",
     top: "56%",
     left: "3%",
@@ -79,11 +89,84 @@ const hotspots: Hotspot[] = [
   },
 ];
 
+const chipmunkEmojis = Array.from({ length: 24 }, (_, i) => ({
+  id: i,
+  emoji: "🐿️",
+  x: Math.random() * 100,
+  delay: Math.random() * 0.8,
+  duration: 1.5 + Math.random() * 1.5,
+  size: 20 + Math.random() * 28,
+  rotation: Math.random() * 360,
+}));
+
 const Sketchbook = () => {
   const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
+  const [showChipmunks, setShowChipmunks] = useState(false);
+  const [showDachshund, setShowDachshund] = useState(false);
+
+  const triggerChipmunkParty = useCallback(() => {
+    setShowChipmunks(true);
+    setTimeout(() => setShowDachshund(true), 2200);
+    setTimeout(() => {
+      setShowChipmunks(false);
+      setTimeout(() => setShowDachshund(false), 3000);
+    }, 4000);
+  }, []);
 
   return (
     <PageContainer title="Sketchbook" subtitle="Prologue — Where it all began">
+      {/* Chipmunk explosion overlay */}
+      <AnimatePresence>
+        {showChipmunks && (
+          <div className="fixed inset-0 z-50 pointer-events-none overflow-hidden">
+            {chipmunkEmojis.map((c) => (
+              <motion.div
+                key={c.id}
+                initial={{ y: "-10vh", x: `${c.x}vw`, opacity: 0, rotate: 0, scale: 0 }}
+                animate={{
+                  y: "110vh",
+                  opacity: [0, 1, 1, 0.8],
+                  rotate: c.rotation,
+                  scale: [0, 1.2, 1, 0.8],
+                }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: c.duration,
+                  delay: c.delay,
+                  ease: "easeIn",
+                }}
+                style={{ fontSize: c.size, position: "absolute" }}
+              >
+                {c.emoji}
+              </motion.div>
+            ))}
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* Dachshund reveal */}
+      <AnimatePresence>
+        {showDachshund && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none"
+          >
+            <div className="bg-card/95 backdrop-blur-xl border border-border/60 rounded-2xl p-6 shadow-2xl text-center max-w-xs pointer-events-auto">
+              <div className="text-6xl mb-3">🐕</div>
+              <p className="font-display text-lg text-card-foreground font-medium">
+                Plot twist.
+              </p>
+              <p className="text-sm text-muted-foreground font-light mt-1.5 leading-relaxed">
+                Mike didn't get a chipmunk. He got a dachshund. And honestly? Way better.
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Prologue Intro */}
       <motion.section
         initial={{ opacity: 0, y: 16 }}
@@ -108,73 +191,102 @@ const Sketchbook = () => {
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         className="relative flex justify-center"
       >
-        {/* Background Echo — blurred atmosphere */}
-        <div className="absolute inset-0 -inset-x-12 -inset-y-20 overflow-hidden pointer-events-none">
+        {/* Background Echo — matched warm tone */}
+        <div className="absolute -inset-x-24 -inset-y-32 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 bg-background/30 mix-blend-multiply z-[1]" />
           <img
             src={artifactImage}
             alt=""
             aria-hidden="true"
-            className="w-full h-full object-cover opacity-[0.06] blur-[40px] scale-110"
+            className="w-full h-full object-cover opacity-[0.09] blur-[50px] scale-125 saturate-[0.6] brightness-110"
           />
         </div>
 
         {/* Floating Artifact */}
         <div className="relative w-full max-w-lg">
-          {/* Paper shadow layers for depth */}
+          {/* Paper shadow layers */}
           <div className="absolute inset-2 bg-foreground/5 rounded-sm blur-xl translate-y-3" />
           <div className="absolute inset-1 bg-foreground/3 rounded-sm blur-md translate-y-1.5" />
 
-          <div className="relative rounded-sm overflow-hidden border border-border/40 shadow-lg shadow-foreground/5">
-            <img
-              src={artifactImage}
-              alt="Lindsay's childhood quest list — 'Things to do before I die'"
-              className="w-full h-auto block"
-            />
+          {/* Warm parchment border frame to blend edges */}
+          <div className="relative rounded-sm overflow-hidden shadow-lg shadow-foreground/5"
+            style={{
+              padding: "6px",
+              background: "linear-gradient(135deg, hsl(var(--parchment)), hsl(var(--background)), hsl(var(--parchment)))",
+            }}
+          >
+            <div className="relative rounded-[2px] overflow-hidden">
+              <img
+                src={artifactImage}
+                alt="Lindsay's childhood quest list — 'Things to do before I die'"
+                className="w-full h-auto block"
+                style={{
+                  filter: "saturate(0.85) brightness(1.02) contrast(0.98)",
+                }}
+              />
 
-            {/* Hotspot Overlay */}
-            <div className="absolute inset-0">
-              {hotspots.map((spot) => (
-                <div
-                  key={spot.id}
-                  className="absolute cursor-pointer group"
-                  style={{
-                    top: spot.top,
-                    left: spot.left,
-                    width: spot.width,
-                    height: spot.height,
-                  }}
-                  onMouseEnter={() => setActiveHotspot(spot.id)}
-                  onMouseLeave={() => setActiveHotspot(null)}
-                  onClick={() =>
-                    setActiveHotspot(activeHotspot === spot.id ? null : spot.id)
-                  }
-                >
-                  {/* Subtle hover highlight */}
-                  <div className="absolute inset-0 rounded-sm bg-glow/0 group-hover:bg-glow/10 transition-colors duration-300" />
+              {/* Soft edge vignette on image to blend into frame */}
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  boxShadow: "inset 0 0 30px 10px hsl(var(--parchment) / 0.5)",
+                }}
+              />
 
-                  {/* Annotation Note */}
-                  <AnimatePresence>
-                    {activeHotspot === spot.id && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 4, scale: 0.97 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 4, scale: 0.97 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute z-20 left-0 bottom-full mb-2 w-56 px-3 py-2.5 rounded-md bg-card/95 backdrop-blur-md border border-border/60 shadow-lg shadow-foreground/5"
-                      >
-                        <p className="text-xs text-card-foreground/90 font-light leading-relaxed italic">
-                          {spot.note}
-                        </p>
-                        <div className="absolute left-4 top-full w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-border/60" />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
+              {/* Hotspot Overlay */}
+              <div className="absolute inset-0">
+                {hotspots.map((spot) => (
+                  <div
+                    key={spot.id}
+                    className={`absolute group ${spot.special ? "cursor-pointer" : "cursor-default"}`}
+                    style={{
+                      top: spot.top,
+                      left: spot.left,
+                      width: spot.width,
+                      height: spot.height,
+                    }}
+                    onMouseEnter={() => setActiveHotspot(spot.id)}
+                    onMouseLeave={() => setActiveHotspot(null)}
+                    onClick={() => {
+                      if (spot.special === "chipmunk") {
+                        triggerChipmunkParty();
+                      } else {
+                        setActiveHotspot(activeHotspot === spot.id ? null : spot.id);
+                      }
+                    }}
+                  >
+                    {/* Hover highlight */}
+                    <div className="absolute inset-0 rounded-sm bg-glow/0 group-hover:bg-glow/10 transition-colors duration-300" />
+
+                    {/* Annotation Note */}
+                    <AnimatePresence>
+                      {activeHotspot === spot.id && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 4, scale: 0.97 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 4, scale: 0.97 }}
+                          transition={{ duration: 0.2 }}
+                          className="absolute z-20 left-0 bottom-full mb-2 w-56 px-3 py-2.5 rounded-md bg-card/95 backdrop-blur-md border border-border/60 shadow-lg shadow-foreground/5"
+                        >
+                          <p className="text-xs text-card-foreground/90 font-light leading-relaxed italic">
+                            {spot.note}
+                          </p>
+                          {spot.special && (
+                            <p className="text-[10px] text-primary/70 mt-1 font-medium not-italic">
+                              Tap to find out →
+                            </p>
+                          )}
+                          <div className="absolute left-4 top-full w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-border/60" />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Artifact caption */}
+          {/* Caption */}
           <p className="mt-4 text-center text-xs text-dust italic font-light tracking-wide">
             Artifact #001 — "Things to do before I die" — circa 2005
           </p>
