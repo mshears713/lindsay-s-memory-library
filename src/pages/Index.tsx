@@ -57,9 +57,10 @@ const Index = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-center mb-16 md:mb-20"
       >
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight mb-4">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight mb-3">
           Memory Library
         </h1>
+        <div className="w-12 h-px bg-glow/40 mx-auto mb-4" />
         <p className="text-lg md:text-xl text-muted-foreground font-light max-w-lg mx-auto leading-relaxed">
           A quiet place where stories live. Pick a chapter, stay a while.
         </p>
