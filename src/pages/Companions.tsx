@@ -33,10 +33,10 @@ const companions = [
   },
   {
     name: "Mickey",
-    blurb: "My favorite. Lindsay saved her from the pound — she had mange, was probably days from being put down. But she came home, healed up, and became the happiest dog you've ever seen. Pure joy with a spotted nose.",
+    blurb: "Dad's graduation gift was supposed to be a car, but Lindsay convinced him that what she really needed was a dog — and that's how Mickey found her way to us.\n\nWhat started as \"we are not getting a dog\" slowly turned into Dad's best-friend era — helped, no doubt, by sleeping late and never barking.\n\nMickey carried a kind of easy happiness that seemed to spill over onto everyone she met.\n\nGentle and full of quiet joy, Mickey had a way of making everyone she met feel chosen, as if her happiness existed just to be shared.",
     dateRange: "Dog · Rescued 🐾",
     accentColor: "chapter-rose",
-    memoryLine: "She got a second chance, and she made the most of every single day.",
+    memoryLine: "Perfectly happy just going wherever Dad went.",
     image: mickeyImg,
   },
 ];
