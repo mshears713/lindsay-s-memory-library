@@ -9,65 +9,65 @@ interface ScreenCrackOverlayProps {
 const crackGroups = [
   // Level 1 — top-right impact
   {
-    main: "M 68 0 Q 64 6 60 14 Q 58 18 62 24 Q 59 28 55 36",
+    main: "M 70 0 L 66 8 L 63 15 L 60 18 L 63 25 L 58 32 L 55 38",
     branches: [
-      "M 62 24 Q 66 27 69 30",
-      "M 60 14 Q 56 16 53 15",
-      "M 55 36 Q 52 38 50 37",
+      "M 63 25 L 67 28 L 70 30",
+      "M 63 15 L 58 14 L 55 16",
+      "M 55 38 L 52 37 L 50 39",
     ],
     hairlines: [
-      "M 64 6 L 66 8",
-      "M 58 18 L 56 20",
-      "M 55 36 Q 57 40 54 44",
+      "M 66 8 L 68 10",
+      "M 60 18 L 57 19",
+      "M 55 38 L 56 42 L 54 45",
     ],
   },
   // Level 2 — left side fracture
   {
-    main: "M 18 0 Q 22 8 26 18 Q 23 24 28 34 Q 25 42 22 52",
+    main: "M 20 0 L 22 10 L 25 18 L 23 26 L 27 34 L 24 44 L 22 52",
     branches: [
-      "M 26 18 Q 30 22 34 20",
-      "M 28 34 Q 32 36 35 34",
-      "M 22 52 Q 18 55 16 54",
-      "M 22 8 Q 18 10 16 12",
+      "M 25 18 L 30 20 L 34 19",
+      "M 27 34 L 32 35 L 35 33",
+      "M 22 52 L 18 54 L 16 53",
+      "M 22 10 L 18 11 L 16 13",
     ],
     hairlines: [
-      "M 23 24 L 20 26",
-      "M 25 42 L 22 44",
-      "M 28 34 Q 26 38 28 42",
+      "M 23 26 L 20 27",
+      "M 24 44 L 21 45",
+      "M 27 34 L 26 39 L 28 43",
     ],
   },
   // Level 3 — bottom-center rising
   {
-    main: "M 48 100 Q 52 90 49 80 Q 53 72 50 62 Q 47 56 52 48",
+    main: "M 50 100 L 52 92 L 49 82 L 52 74 L 50 64 L 48 57 L 51 48",
     branches: [
-      "M 49 80 Q 44 76 40 78",
-      "M 50 62 Q 55 58 58 60",
-      "M 52 48 Q 48 44 46 46",
-      "M 52 90 Q 56 88 58 90",
+      "M 49 82 L 44 78 L 40 79",
+      "M 50 64 L 55 60 L 58 61",
+      "M 51 48 L 47 45 L 45 47",
+      "M 52 92 L 56 90 L 58 91",
     ],
     hairlines: [
-      "M 53 72 L 56 70",
-      "M 47 56 L 44 54",
-      "M 49 80 Q 46 84 48 88",
-      "M 52 48 Q 55 45 54 42",
+      "M 52 74 L 55 72",
+      "M 48 57 L 45 55",
+      "M 49 82 L 47 86 L 48 89",
+      "M 51 48 L 54 46 L 53 43",
     ],
   },
   // Level 4 — diagonal stress fracture
   {
-    main: "M 82 100 Q 78 88 74 76 Q 77 68 72 58 Q 75 50 70 40 Q 73 32 68 22",
+    main: "M 84 100 L 80 90 L 76 78 L 74 70 L 72 60 L 70 52 L 72 42 L 68 32 L 66 22",
     branches: [
-      "M 74 76 Q 70 72 66 74",
-      "M 72 58 Q 76 54 80 56",
-      "M 70 40 Q 66 36 62 38",
-      "M 68 22 Q 72 18 74 20",
-      "M 78 88 Q 82 86 84 88",
+      "M 76 78 L 71 74 L 67 75",
+      "M 72 60 L 77 56 L 80 57",
+      "M 72 42 L 67 38 L 64 39",
+      "M 66 22 L 70 19 L 73 20",
+      "M 80 90 L 84 88 L 86 89",
     ],
     hairlines: [
-      "M 77 68 L 80 66",
-      "M 75 50 L 72 48",
-      "M 73 32 L 76 30",
-      "M 74 76 Q 72 80 74 84",
-      "M 70 40 Q 68 44 70 48",
+      "M 74 70 L 77 68",
+      "M 70 52 L 67 50",
+      "M 68 32 L 71 30",
+      "M 76 78 L 74 82 L 76 86",
+      "M 72 42 L 70 46 L 72 50",
     ],
   },
 ];
@@ -146,7 +146,7 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                 <motion.path
                   d={group.main}
                   fill="none"
-                  stroke="hsl(var(--chapter-coral) / 0.55)"
+                  stroke="hsl(var(--foreground) / 0.7)"
                   strokeWidth="0.35"
                   strokeLinecap="round"
                   filter="url(#crack-glow)"
@@ -174,7 +174,7 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                     key={`branch-${groupIdx}-${i}`}
                     d={branch}
                     fill="none"
-                    stroke="hsl(var(--chapter-coral) / 0.4)"
+                    stroke="hsl(var(--foreground) / 0.5)"
                     strokeWidth="0.22"
                     strokeLinecap="round"
                     initial={isNewest ? { pathLength: 0, opacity: 0 } : {}}
@@ -193,7 +193,7 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                     key={`hair-${groupIdx}-${i}`}
                     d={line}
                     fill="none"
-                    stroke="hsl(var(--chapter-coral) / 0.2)"
+                    stroke="hsl(var(--foreground) / 0.25)"
                     strokeWidth="0.1"
                     strokeLinecap="round"
                     initial={isNewest ? { pathLength: 0, opacity: 0 } : {}}
@@ -213,7 +213,7 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                       cx={group.main.match(/M\s([\d.]+)\s([\d.]+)/)?.[1] || "50"}
                       cy={group.main.match(/M\s([\d.]+)\s([\d.]+)/)?.[2] || "50"}
                       r="0.4"
-                      fill="hsl(var(--chapter-coral) / 0.15)"
+                      fill="hsl(var(--foreground) / 0.15)"
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.3 }}
