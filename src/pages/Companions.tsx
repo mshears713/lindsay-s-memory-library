@@ -1,49 +1,43 @@
 import { motion } from "framer-motion";
 import PageContainer from "@/components/PageContainer";
 import PetCard from "@/components/PetCard";
+import babyImg from "@/assets/baby.jpg";
+import lilyImg from "@/assets/lily.jpg";
+import doughnutImg from "@/assets/doughnut.jpg";
+import mickeyImg from "@/assets/mickey.jpg";
 
 const companions = [
   {
-    name: "Buddy",
-    blurb: "The first one. Loyal beyond reason, always waiting at the door. Some bonds don't need words.",
-    dateRange: "2005–2017",
+    name: "Baby",
+    blurb: "Our first love. She was there through every messy, beautiful year of growing up — curled at the foot of the bed, purring through homework and heartbreaks alike. She lived a long, gentle life and never once stopped choosing us.",
+    dateRange: "Cat · Childhood",
     accentColor: "chapter-amber",
-    memoryLine: "He always knew when you needed him most.",
+    memoryLine: "She was the quiet constant through every chapter.",
+    image: babyImg,
   },
   {
-    name: "Luna",
-    blurb: "Queen of the couch and guardian of all naps. She chose us — not the other way around.",
-    dateRange: "2012–present",
+    name: "Lily",
+    blurb: "A scrappy little tabby we found in New Jersey. She had the sweetest face but the twins made her life a bit hard — they weren't always kind to her. She deserved softer days than she sometimes got.",
+    dateRange: "Cat · New Jersey",
     accentColor: "chapter-lavender",
-    memoryLine: "The softest purr in every quiet moment.",
+    memoryLine: "Tough little soul in a world that wasn't always gentle.",
+    image: lilyImg,
   },
   {
-    name: "Mochi",
-    blurb: "Small, chaotic, and absolutely convinced the world revolves around treat time.",
-    dateRange: "2018–present",
+    name: "Doughnut",
+    blurb: "Our sweet, goofy girl. She didn't get enough oxygen as a puppy, so she's a little slow — but honestly, she loves harder than anyone because of it. Still here, still wagging, still the best part of every morning.",
+    dateRange: "Dog · Still here 💛",
     accentColor: "chapter-coral",
-    memoryLine: "Tiny paws, enormous personality.",
+    memoryLine: "A little slower, a lot more love.",
+    image: doughnutImg,
   },
   {
-    name: "Oliver",
-    blurb: "The quiet one. Preferred windowsills and warm laundry over anything else in life.",
-    dateRange: "2010–2020",
-    accentColor: "chapter-sage",
-    memoryLine: "Always found in a patch of sunlight.",
-  },
-  {
-    name: "Pepper",
-    blurb: "Arrived unexpectedly, stayed permanently. Expert at stealing socks and hearts equally.",
-    dateRange: "2021–present",
-    accentColor: "chapter-sky",
-    memoryLine: "The one who made every room feel less empty.",
-  },
-  {
-    name: "Rosie",
-    blurb: "The gentle giant. Afraid of thunderstorms, brave about everything else.",
-    dateRange: "2015–present",
+    name: "Mickey",
+    blurb: "My favorite. Lindsay saved her from the pound — she had mange, was probably days from being put down. But she came home, healed up, and became the happiest dog you've ever seen. Pure joy with a spotted nose.",
+    dateRange: "Dog · Rescued 🐾",
     accentColor: "chapter-rose",
-    memoryLine: "She leaned into you like you were her whole world.",
+    memoryLine: "She got a second chance, and she made the most of every single day.",
+    image: mickeyImg,
   },
 ];
 
@@ -55,10 +49,10 @@ const Companions = () => (
       transition={{ delay: 0.3, duration: 0.7 }}
       className="text-sm text-muted-foreground/60 font-light italic mb-10 -mt-4"
     >
-      Every life needs a few good paws.
+      Some souls stay with you long after they're gone.
     </motion.p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
       {companions.map((pet, i) => (
         <PetCard key={pet.name} {...pet} index={i} />
       ))}
@@ -70,7 +64,7 @@ const Companions = () => (
       transition={{ delay: 1.2, duration: 0.7 }}
       className="text-center text-xs text-muted-foreground/50 font-light italic mt-16"
     >
-      more companions to come…
+      every paw print leaves a mark on the heart.
     </motion.p>
   </PageContainer>
 );
