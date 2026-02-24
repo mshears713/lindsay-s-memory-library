@@ -25,10 +25,10 @@ const companions = [
   },
   {
     name: "Doughnut",
-    blurb: "Our sweet, goofy girl. She didn't get enough oxygen as a puppy, so she's a little slow — but honestly, she loves harder than anyone because of it. Still here, still wagging, still the best part of every morning.",
+    blurb: "Born a chubby little chill-ball with a slightly scrambled start in life, he somehow evolved into Lindsay's chaotic sidekick — equal parts sweet, strange, and permanently confused. He's the kind of dog you don't fully understand but end up tolerating anyway, mostly because his weird little personality keeps things interesting (and occasionally gets him into trouble he absolutely didn't think through).",
     dateRange: "Dog · Still here 💛",
     accentColor: "chapter-coral",
-    memoryLine: "A little slower, a lot more love.",
+    memoryLine: "Be sure to keep your stash out of reach.",
     image: doughnutImg,
   },
   {
