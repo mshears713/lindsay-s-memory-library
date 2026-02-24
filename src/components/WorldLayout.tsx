@@ -13,7 +13,7 @@ const DustParticles = () => (
     {Array.from({ length: 18 }).map((_, i) => (
       <span
         key={i}
-        className="dust-mote absolute rounded-full bg-foreground/[0.04]"
+        className="dust-mote absolute rounded-full bg-foreground/[0.08]"
         style={{
           width: `${2 + (i % 4)}px`,
           height: `${2 + (i % 4)}px`,
@@ -52,10 +52,10 @@ const WorldLayout = ({ children }: WorldLayoutProps) => {
 
       {/* Ambient background texture — parallax layer */}
       <div ref={bgRef} className="fixed inset-0 pointer-events-none will-change-transform">
-        <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-glow/6 rounded-full blur-[100px] animate-glow-pulse" />
-        <div className="absolute bottom-[-10%] right-1/4 w-[420px] h-[420px] bg-chapter-sage/8 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/3 right-[10%] w-[320px] h-[320px] bg-chapter-rose/5 rounded-full blur-[80px] animate-glow-pulse" style={{ animationDelay: "4s" }} />
-        <div className="absolute top-[60%] left-[8%] w-[260px] h-[260px] bg-chapter-sky/4 rounded-full blur-[90px] animate-glow-pulse" style={{ animationDelay: "6s" }} />
+        <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-glow/15 rounded-full blur-[100px] animate-glow-pulse" />
+        <div className="absolute bottom-[-10%] right-1/4 w-[420px] h-[420px] bg-chapter-sage/18 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/3 right-[10%] w-[320px] h-[320px] bg-chapter-rose/12 rounded-full blur-[80px] animate-glow-pulse" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-[60%] left-[8%] w-[260px] h-[260px] bg-chapter-sky/10 rounded-full blur-[90px] animate-glow-pulse" style={{ animationDelay: "6s" }} />
       </div>
 
       {/* Navigation */}
