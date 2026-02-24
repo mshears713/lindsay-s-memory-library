@@ -9,18 +9,18 @@ import mickeyImg from "@/assets/mickey.jpg";
 const companions = [
   {
     name: "Baby",
-    blurb: "Our first love. She was there through every messy, beautiful year of growing up — curled at the foot of the bed, purring through homework and heartbreaks alike. She lived a long, gentle life and never once stopped choosing us.",
+    blurb: "Our first companion. He followed us through different houses, new schools, and all the small changes that come with growing up — always finding his place by a window or at the foot of the bed, watching as we grew and changed. He lived a long, gentle life, a quiet thread woven through our family's story, steady and familiar no matter where we landed.",
     dateRange: "Cat · Childhood",
     accentColor: "chapter-amber",
-    memoryLine: "She was the quiet constant through every chapter.",
+    memoryLine: "He was the quiet constant through every chapter.",
     image: babyImg,
   },
   {
     name: "Lily",
-    blurb: "A scrappy little tabby we found in New Jersey. She had the sweetest face but the twins made her life a bit hard — they weren't always kind to her. She deserved softer days than she sometimes got.",
+    blurb: "A true New Jersey cat, famously bullied by the Holderith twins before she ever experienced the calmer rhythm of the Shears household. She never quite picked up the easygoing chill that most of our pets had, keeping her distance and tolerating affection strictly on her own terms. She was perfectly fine as long as you didn't get too close, a cautious little survivor whose story was shaped as much by where she started as by where she ended up.",
     dateRange: "Cat · New Jersey",
     accentColor: "chapter-lavender",
-    memoryLine: "Tough little soul in a world that wasn't always gentle.",
+    memoryLine: "Cautious, independent, and perfectly herself.",
     image: lilyImg,
   },
   {
