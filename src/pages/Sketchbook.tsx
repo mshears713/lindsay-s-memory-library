@@ -36,7 +36,7 @@ const hotspots: Hotspot[] = [
     left: "3%",
     width: "65%",
     height: "6%",
-    note: "Greg or Waffles — the most important naming decision of a lifetime.",
+    note: "Greg or Waffles — still hasnt happened...yet",
   },
   {
     id: "ucf",
@@ -44,7 +44,7 @@ const hotspots: Hotspot[] = [
     left: "3%",
     width: "25%",
     height: "6%",
-    note: "Go to UCF — a dream campus, circled with determination.",
+    note: "Go to UCF — a warmup to NSU.",
   },
   {
     id: "chipmunk",
@@ -69,7 +69,7 @@ const hotspots: Hotspot[] = [
     left: "3%",
     width: "42%",
     height: "6%",
-    note: "Make a movie — the director's chair was always calling.",
+    note: "Make a movie — the director's chair is still calling.",
   },
   {
     id: "stargirl",
@@ -85,7 +85,7 @@ const hotspots: Hotspot[] = [
     left: "3%",
     width: "35%",
     height: "6%",
-    note: "Learn to surf — Florida dreams in the making.",
+    note: "Does Snowboarding and Wakeboarding count?.",
   },
 ];
 
@@ -156,9 +156,7 @@ const Sketchbook = () => {
           >
             <div className="bg-card/95 backdrop-blur-xl border border-border/60 rounded-2xl p-6 shadow-2xl text-center max-w-xs pointer-events-auto">
               <div className="text-6xl mb-3">🐕</div>
-              <p className="font-display text-lg text-card-foreground font-medium">
-                Plot twist.
-              </p>
+              <p className="font-display text-lg text-card-foreground font-medium">Plot twist.</p>
               <p className="text-sm text-muted-foreground font-light mt-1.5 leading-relaxed">
                 Mike didn't get a chipmunk. He got a dachshund. And honestly? Way better.
               </p>
@@ -175,9 +173,9 @@ const Sketchbook = () => {
         className="mb-16 max-w-2xl"
       >
         <p className="text-lg text-muted-foreground font-light leading-relaxed">
-          Before the chapters were written, there was a list — scrawled on a wall in bold,
-          unfiltered handwriting. A young Lindsay mapped out an entire life in bullet points:
-          dreams, goals, and the kind of plans only a kid with limitless imagination could make.
+          Before the chapters were written, there was a list — scrawled on a wall in bold, unfiltered handwriting. A
+          young Lindsay mapped out an entire life in bullet points: dreams, goals, and the kind of plans only a kid with
+          limitless imagination could make.
         </p>
         <p className="mt-4 text-muted-foreground/70 font-light italic text-sm">
           Hover over the artifact to read the margin notes.
@@ -209,10 +207,12 @@ const Sketchbook = () => {
           <div className="absolute inset-1 bg-foreground/3 rounded-sm blur-md translate-y-1.5" />
 
           {/* Warm parchment border frame to blend edges */}
-          <div className="relative rounded-sm overflow-hidden shadow-lg shadow-foreground/5"
+          <div
+            className="relative rounded-sm overflow-hidden shadow-lg shadow-foreground/5"
             style={{
               padding: "6px",
-              background: "linear-gradient(135deg, hsl(var(--parchment)), hsl(var(--background)), hsl(var(--parchment)))",
+              background:
+                "linear-gradient(135deg, hsl(var(--parchment)), hsl(var(--background)), hsl(var(--parchment)))",
             }}
           >
             <div className="relative rounded-[2px] overflow-hidden">
@@ -272,9 +272,7 @@ const Sketchbook = () => {
                             {spot.note}
                           </p>
                           {spot.special && (
-                            <p className="text-[10px] text-primary/70 mt-1 font-medium not-italic">
-                              Tap to find out →
-                            </p>
+                            <p className="text-[10px] text-primary/70 mt-1 font-medium not-italic">Tap to find out →</p>
                           )}
                           <div className="absolute left-4 top-full w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[5px] border-t-border/60" />
                         </motion.div>
