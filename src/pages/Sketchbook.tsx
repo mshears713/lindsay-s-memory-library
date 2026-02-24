@@ -48,11 +48,11 @@ const hotspots: Hotspot[] = [
   },
   {
     id: "chipmunk",
-    top: "60%",
+    top: "45%",
     left: "3%",
     width: "45%",
     height: "7%",
-    note: "Own a chipmunk. Non-negotiable life goal.",
+    note: "Buy a House check, destroy a house, check",
   },
   {
     id: "mike-chipmunk",
