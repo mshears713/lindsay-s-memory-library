@@ -90,7 +90,7 @@ const RestrictedArea = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
-        className="flex flex-col items-center relative z-[60]"
+        className="flex flex-col items-center relative z-[40]"
       >
         <p className="text-xs text-muted-foreground/60 font-light mb-5 tracking-wide uppercase">
           The forbidden machine
