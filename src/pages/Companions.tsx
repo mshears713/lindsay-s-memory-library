@@ -5,6 +5,7 @@ import babyImg from "@/assets/baby.jpg";
 import lilyImg from "@/assets/lily.jpg";
 import doughnutImg from "@/assets/doughnut.jpg";
 import mickeyImg from "@/assets/mickey.jpg";
+import chaiImg from "@/assets/chai.jpg";
 
 const companions = [
   {
@@ -38,6 +39,14 @@ const companions = [
     accentColor: "chapter-rose",
     memoryLine: "Perfectly happy just going wherever Dad went.",
     image: mickeyImg,
+  },
+  {
+    name: "Chai",
+    blurb: "Chai showed up late but made himself right at home — more social than the other cats, a little playful, a lot chill, and somehow more dog than feline. He had a way of pulling Mom into full-on conversations, which we all found a little funny… but he didn't seem to mind being the one who opened that very chatty door.",
+    dateRange: "Cat · Mom's sidekick",
+    accentColor: "chapter-sage",
+    memoryLine: "Mom's quiet little sidekick when she needed one most.",
+    image: chaiImg,
   },
 ];
 
