@@ -46,7 +46,7 @@ const chapterSignatures: Record<string, React.ReactNode> = {
   "/wall": (
     /* Sketchbook — faint pencil sketch lines */
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
-      <svg className="absolute bottom-3 right-3 w-16 h-16 text-chapter-coral/20" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="0.8">
+      <svg className="absolute bottom-3 right-3 w-16 h-16 text-chapter-coral/40" viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="0.8">
         <path d="M8 56 L20 12 L24 14 L12 58 Z" />
         <path d="M20 12 L22 8 L26 10 L24 14 Z" />
         <line x1="28" y1="42" x2="52" y2="42" strokeDasharray="2 3" />
@@ -57,35 +57,35 @@ const chapterSignatures: Record<string, React.ReactNode> = {
   "/timeline": (
     /* Chronicles — thin timeline node */
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
-      <div className="absolute right-5 top-4 bottom-4 w-px bg-chapter-sky/20" />
-      <div className="absolute right-[18px] top-1/3 w-1.5 h-1.5 rounded-full bg-chapter-sky/30" />
-      <div className="absolute right-[18px] top-2/3 w-1.5 h-1.5 rounded-full bg-chapter-sky/30" />
+      <div className="absolute right-5 top-4 bottom-4 w-px bg-chapter-sky/40" />
+      <div className="absolute right-[18px] top-1/3 w-2 h-2 rounded-full bg-chapter-sky/50" />
+      <div className="absolute right-[18px] top-2/3 w-2 h-2 rounded-full bg-chapter-sky/50" />
     </div>
   ),
   "/pets": (
     /* Companions — soft paw print */
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
-      <span className="absolute bottom-3 right-4 text-xl opacity-20 select-none">🐾</span>
+      <span className="absolute bottom-3 right-4 text-xl opacity-40 select-none">🐾</span>
     </div>
   ),
   "/mood": (
     /* Reflections — soft gradient shimmer */
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-chapter-sage/5 via-transparent to-chapter-sage/8 rounded-2xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-chapter-sage/10 via-transparent to-chapter-sage/15 rounded-2xl" />
     </div>
   ),
   "/lindsay-only": (
-    /* Restricted Area — playful comic micro-glitch */
+    /* Restricted Area — warning sign with micro-glitch */
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
-      <div className="absolute top-2 right-3 text-[9px] font-mono text-chapter-lavender/30 tracking-widest animate-pulse select-none">⚠</div>
-      <div className="absolute bottom-4 left-8 w-8 h-px bg-chapter-lavender/15 animate-pulse" style={{ animationDelay: "0.3s" }} />
+      <span className="absolute top-3 right-3 text-lg opacity-40 select-none animate-pulse">⚠️</span>
+      <div className="absolute bottom-4 left-8 w-8 h-px bg-chapter-lavender/30 animate-pulse" style={{ animationDelay: "0.3s" }} />
     </div>
   ),
   "/audiology": (
     /* Research Wing — clean clinical accent */
     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none overflow-hidden">
-      <div className="absolute top-3 right-3 bottom-3 w-px bg-chapter-amber/15" />
-      <div className="absolute bottom-3 left-6 right-6 h-px bg-chapter-amber/10" />
+      <div className="absolute top-3 right-3 bottom-3 w-px bg-chapter-amber/30" />
+      <div className="absolute bottom-3 left-6 right-6 h-px bg-chapter-amber/20" />
     </div>
   ),
 };
