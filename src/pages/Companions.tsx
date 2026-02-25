@@ -6,6 +6,7 @@ import lilyImg from "@/assets/lily.jpg";
 import doughnutImg from "@/assets/doughnut.jpg";
 import mickeyImg from "@/assets/mickey.jpg";
 import chaiImg from "@/assets/chai.jpg";
+import mochaImg from "@/assets/mocha.jpg";
 
 const companions = [
   {
@@ -47,6 +48,14 @@ const companions = [
     accentColor: "chapter-sage",
     memoryLine: "Mom's quiet little sidekick when she needed one most.",
     image: chaiImg,
+  },
+  {
+    name: "Mocha",
+    blurb: "Mocha showed up from the pound with a heart built for motion — part athlete, part chaos, and completely unforgettable. For a moment she looked like a low-energy upgrade… and then the shelter meds wore off and the real, turbo-charged Mocha made her dramatic entrance. Strong, fast, and always ready for the next adventure, she lives life at full speed, powered by endless fetch, ambitious digging projects, and an ongoing rivalry with light and shadows.",
+    dateRange: "Dog · Pitbull 🐾",
+    accentColor: "chapter-coral",
+    memoryLine: "Overwhelming to most, her wild spirit fits right in with the energy of this family.",
+    image: mochaImg,
   },
 ];
 
