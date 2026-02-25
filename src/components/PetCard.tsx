@@ -38,6 +38,7 @@ interface PetCardProps {
   name: string;
   blurb?: string;
   image?: string;
+  imagePosition?: string;
   dateRange?: string;
   accentColor?: string;
   index?: number;
@@ -48,6 +49,7 @@ const PetCard = ({
   name,
   blurb,
   image,
+  imagePosition,
   dateRange,
   accentColor = "chapter-amber",
   index = 0,
@@ -79,6 +81,7 @@ const PetCard = ({
             <img
               src={image}
               alt={name}
+              style={imagePosition ? { objectPosition: imagePosition } : undefined}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           ) : (
