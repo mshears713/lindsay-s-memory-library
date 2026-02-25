@@ -62,10 +62,11 @@ const companions = [
   {
     name: "Doodle",
     blurb: "Beautiful, baffling, and permanently covered in something she absolutely should not be — Doodle looks like a show dog but operates like a malfunctioning alarm siren. She greets every sunrise with a bark that could shatter glass and the confidence of a dog who has absolutely no idea what's going on.",
-    dateRange: "Dog · Still here ☁️",
+    dateRange: "Dog · Airhead ☁️",
     accentColor: "chapter-sky",
     memoryLine: "Proof that you can be stunningly photogenic and still lose every single battle with common sense.",
     image: doodleImg,
+    imagePosition: "center 20%",
   },
 ];
 
