@@ -303,9 +303,9 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                       }}
                     >
                       <div className="bg-card rounded-lg p-6 md:p-8 text-center max-w-xs">
-                        <div className="text-7xl mb-3">🤬</div>
+                        <div className="text-7xl mb-3">😤</div>
                         <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 leading-tight">
-                          I TOLD YOU!!<br />DON'T. TOUCH. IT. 😤🚫💢
+                          I TOLD YOU<br />NOT TO TOUCH IT.
                         </h3>
                         <div className="w-12 h-px bg-chapter-coral/30 mx-auto my-3" />
                         <p className="text-sm text-muted-foreground font-light italic">
