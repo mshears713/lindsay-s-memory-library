@@ -7,6 +7,7 @@ import doughnutImg from "@/assets/doughnut.jpg";
 import mickeyImg from "@/assets/mickey.jpg";
 import chaiImg from "@/assets/chai.jpg";
 import mochaImg from "@/assets/mocha.jpg";
+import doodleImg from "@/assets/doodle.jpg";
 
 const companions = [
   {
@@ -52,11 +53,19 @@ const companions = [
   {
     name: "Mocha",
     blurb: "Mocha showed up from the pound with a heart built for motion — part athlete, part chaos, and completely unforgettable. For a moment she looked like a low-energy upgrade… and then the shelter meds wore off and the real, turbo-charged Mocha made her dramatic entrance. Strong, fast, and always ready for the next adventure, she lives life at full speed, powered by endless fetch, ambitious digging projects, and an ongoing rivalry with light and shadows.",
-    dateRange: "Dog · Pitbull 🐾",
+    dateRange: "Dog · Unstoppable 🚀",
     accentColor: "chapter-coral",
     memoryLine: "Overwhelming to most, her wild spirit fits right in with the energy of this family.",
     image: mochaImg,
     imagePosition: "center 10%",
+  },
+  {
+    name: "Doodle",
+    blurb: "Beautiful, baffling, and permanently covered in something she absolutely should not be — Doodle looks like a show dog but operates like a malfunctioning alarm siren. She greets every sunrise with a bark that could shatter glass and the confidence of a dog who has absolutely no idea what's going on.",
+    dateRange: "Dog · Still here ☁️",
+    accentColor: "chapter-sky",
+    memoryLine: "Proof that you can be stunningly photogenic and still lose every single battle with common sense.",
+    image: doodleImg,
   },
 ];
 
