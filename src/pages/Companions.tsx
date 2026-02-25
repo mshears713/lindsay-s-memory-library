@@ -56,7 +56,7 @@ const companions = [
     accentColor: "chapter-coral",
     memoryLine: "Overwhelming to most, her wild spirit fits right in with the energy of this family.",
     image: mochaImg,
-    imagePosition: "center 20%",
+    imagePosition: "center 10%",
   },
 ];
 
