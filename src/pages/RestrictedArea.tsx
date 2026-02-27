@@ -35,12 +35,12 @@ const RestrictedArea = () => {
       {/* Progressive overlay */}
       <ScreenCrackOverlay damageLevel={damageLevel} />
 
-      {/* Restricted Intro */}
+      {/* Clearance Level Header */}
       <motion.section
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="mb-14 max-w-2xl"
+        className="mb-8 max-w-2xl"
       >
         <div className="flex items-center gap-2.5 mb-4">
           <ShieldAlert className="w-5 h-5 text-chapter-coral" />
@@ -48,49 +48,14 @@ const RestrictedArea = () => {
             Clearance Level: Lindsay Only
           </p>
         </div>
-        <p className="text-lg text-muted-foreground font-light leading-relaxed">
-          Every library has a volume that doesn't belong on the shelf — one that
-          smells faintly of mischief and was probably filed under "do not open."
-          You found it. Congratulations. Or condolences.
-        </p>
       </motion.section>
 
-      {/* Warning Artifact */}
-      <motion.section
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
-        className="relative flex justify-center mb-16"
-      >
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <img src={warningArtifact} alt="" className="w-[600px] h-auto opacity-[0.06] blur-[50px] scale-125 saturate-[0.4]" />
-        </div>
-
-        <div className="relative w-full max-w-md">
-          <div className="absolute inset-2 bg-foreground/5 rounded-lg blur-xl translate-y-3" />
-          <div
-            className="relative rounded-lg overflow-hidden shadow-lg shadow-foreground/5"
-            style={{ padding: "8px", background: "linear-gradient(135deg, hsl(var(--parchment)), hsl(var(--card)), hsl(var(--parchment)))" }}
-          >
-            <div className="relative rounded-md overflow-hidden border border-border/30">
-              <div className="absolute -top-1 left-8 w-16 h-5 bg-chapter-amber/30 rotate-[-2deg] rounded-sm z-10" />
-              <div className="absolute -top-1 right-10 w-14 h-5 bg-chapter-amber/25 rotate-[3deg] rounded-sm z-10" />
-              <img src={warningArtifact} alt="Lindsay's Warning" className="w-full h-auto block" />
-              <div className="absolute inset-0 pointer-events-none rounded-md" style={{ background: "radial-gradient(ellipse at center, transparent 50%, hsl(var(--background) / 0.25) 100%)" }} />
-            </div>
-          </div>
-          <p className="mt-4 text-center text-xs text-dust italic font-light tracking-wide">
-            Artifact #007 — "The Warning" — date unknown, presumed eternal
-          </p>
-        </div>
-      </motion.section>
-
-      {/* Forbidden Machine */}
+      {/* Forbidden Machine — right below clearance level */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.35, ease: "easeOut" }}
-        className="flex flex-col items-center relative z-[40]"
+        transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+        className="flex flex-col items-center relative z-[40] mb-16"
       >
         <p className="text-xs text-muted-foreground/60 font-light mb-5 tracking-wide uppercase">
           The forbidden machine
@@ -154,6 +119,50 @@ const RestrictedArea = () => {
             </motion.p>
           )}
         </AnimatePresence>
+      </motion.section>
+
+      {/* Warning Artifact */}
+      <motion.section
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
+        className="relative flex justify-center mb-16"
+      >
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
+          <img src={warningArtifact} alt="" className="w-[600px] h-auto opacity-[0.06] blur-[50px] scale-125 saturate-[0.4]" />
+        </div>
+
+        <div className="relative w-full max-w-md">
+          <div className="absolute inset-2 bg-foreground/5 rounded-lg blur-xl translate-y-3" />
+          <div
+            className="relative rounded-lg overflow-hidden shadow-lg shadow-foreground/5"
+            style={{ padding: "8px", background: "linear-gradient(135deg, hsl(var(--parchment)), hsl(var(--card)), hsl(var(--parchment)))" }}
+          >
+            <div className="relative rounded-md overflow-hidden border border-border/30">
+              <div className="absolute -top-1 left-8 w-16 h-5 bg-chapter-amber/30 rotate-[-2deg] rounded-sm z-10" />
+              <div className="absolute -top-1 right-10 w-14 h-5 bg-chapter-amber/25 rotate-[3deg] rounded-sm z-10" />
+              <img src={warningArtifact} alt="Lindsay's Warning" className="w-full h-auto block" />
+              <div className="absolute inset-0 pointer-events-none rounded-md" style={{ background: "radial-gradient(ellipse at center, transparent 50%, hsl(var(--background) / 0.25) 100%)" }} />
+            </div>
+          </div>
+          <p className="mt-4 text-center text-xs text-dust italic font-light tracking-wide">
+            Artifact #007 — "The Warning" — date unknown, presumed eternal
+          </p>
+        </div>
+      </motion.section>
+
+      {/* Intro text — moved to bottom */}
+      <motion.section
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+        className="max-w-2xl"
+      >
+        <p className="text-lg text-muted-foreground font-light leading-relaxed">
+          Every library has a volume that doesn't belong on the shelf — one that
+          smells faintly of mischief and was probably filed under "do not open."
+          You found it. Congratulations. Or condolences.
+        </p>
       </motion.section>
     </PageContainer>
   );
