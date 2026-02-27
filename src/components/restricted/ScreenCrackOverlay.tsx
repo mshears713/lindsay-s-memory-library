@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import lindsayAngry from "@/assets/lindsay-angry.jpg";
 
 interface ScreenCrackOverlayProps {
   damageLevel: number; // 0-5
@@ -303,13 +304,15 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                       }}
                     >
                       <div className="bg-card rounded-lg p-6 md:p-8 text-center max-w-xs">
-                        <div className="text-7xl mb-3">😤</div>
+                        <div className="w-28 h-28 mx-auto mb-3 rounded-full overflow-hidden border-2 border-chapter-coral/30 shadow-lg">
+                          <img src={lindsayAngry} alt="Lindsay is NOT happy" className="w-full h-full object-cover" />
+                        </div>
                         <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-2 leading-tight">
-                          I TOLD YOU<br />NOT TO TOUCH IT.
+                          I TOLD YOU!!!<br />DON'T. TOUCH. IT. 🚫😤💀
                         </h3>
                         <div className="w-12 h-px bg-chapter-coral/30 mx-auto my-3" />
                         <p className="text-sm text-muted-foreground font-light italic">
-                          — Lindsay, visibly unimpressed
+                          — Lindsay, absolutely furious since birth
                         </p>
                       </div>
                     </div>
