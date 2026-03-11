@@ -2,11 +2,17 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import PageContainer from "@/components/PageContainer";
+// @ts-ignore - vite-imagetools query
 import saranacImg from "@/assets/saranac-lake.png?w=1600&format=webp&quality=80";
+// @ts-ignore - vite-imagetools query
 import pagosaImg from "@/assets/pagosa-springs.png?w=1600&format=webp&quality=80";
+// @ts-ignore - vite-imagetools query
 import cruiseImg from "@/assets/last-cruise.png?w=1600&format=webp&quality=80";
+// @ts-ignore - vite-imagetools query
 import saranacFull from "@/assets/saranac-lake.png?w=1600&format=webp&quality=90";
+// @ts-ignore - vite-imagetools query
 import pagosaFull from "@/assets/pagosa-springs.png?w=1600&format=webp&quality=90";
+// @ts-ignore - vite-imagetools query
 import cruiseFull from "@/assets/last-cruise.png?w=1600&format=webp&quality=90";
 
 const memories = [
