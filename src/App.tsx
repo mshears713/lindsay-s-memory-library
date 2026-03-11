@@ -25,7 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/wall" element={<Sketchbook />} />
-            <Route path="/timeline" element={<Chronicles />} />
+            
             <Route path="/pets" element={<Companions />} />
             <Route path="/mood" element={<Reflections />} />
             <Route path="/lindsay-only" element={<RestrictedArea />} />

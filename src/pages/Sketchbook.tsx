@@ -114,7 +114,7 @@ const Sketchbook = () => {
   }, []);
 
   return (
-    <PageContainer title="Sketchbook" subtitle="Prologue — Where it all began">
+    <PageContainer title="First Draft" subtitle="Life imagined before it happened.">
       {/* Chipmunk explosion overlay */}
       <AnimatePresence>
         {showChipmunks && (

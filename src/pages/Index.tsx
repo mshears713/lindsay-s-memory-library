@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ChapterCard from "@/components/ChapterCard";
-import { Pencil, Clock, Heart, Smile, Lock, Stethoscope } from "lucide-react";
+import { Pencil, Heart, Smile, Lock, Stethoscope } from "lucide-react";
 
 const chapters = [
   {

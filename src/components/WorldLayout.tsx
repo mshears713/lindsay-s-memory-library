@@ -66,7 +66,7 @@ const WorldLayout = ({ children }: WorldLayoutProps) => {
             <BookOpen className="w-3.5 h-3.5 text-primary/70 transition-transform duration-500 group-hover:scale-110" />
           </div>
           <span className="font-display text-sm font-medium text-muted-foreground tracking-wide uppercase">
-            The Lindsay Archive
+            The Living Scrapbook
           </span>
         </Link>
 

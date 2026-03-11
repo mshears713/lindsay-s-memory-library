@@ -16,7 +16,7 @@ const Reflections = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   return (
-    <PageContainer title="Our Little World" subtitle="Moments from our travels, always close at hand.">
+    <PageContainer title="Our Little World" subtitle="Little reminders of the places we loved">
       <div className="flex flex-col gap-16 md:gap-24 mt-4">
         {memories.map((m, i) => (
           <motion.div
