@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WorldLayout from "@/components/WorldLayout";
 import Index from "./pages/Index";
 import Sketchbook from "./pages/Sketchbook";
-import Chronicles from "./pages/Chronicles";
+
 import Companions from "./pages/Companions";
 import Reflections from "./pages/Reflections";
 import RestrictedArea from "./pages/RestrictedArea";
