@@ -71,7 +71,7 @@ const companions = [
 ];
 
 const Companions = () => (
-  <PageContainer title="Companions" subtitle="The ones who made every chapter warmer">
+  <PageContainer title="Companions" subtitle="The pets who made life brighter">
     <motion.p
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

@@ -1,42 +1,28 @@
 import { motion } from "framer-motion";
 import ChapterCard from "@/components/ChapterCard";
-import { Pencil, Clock, Heart, Smile, Lock, Stethoscope } from "lucide-react";
+import { Pencil, Heart, Smile, Lock, Stethoscope } from "lucide-react";
 
 const chapters = [
   {
-    title: "Sketchbook",
-    subtitle: "Childhood drawings & the memory wall",
+    title: "First Draft",
+    subtitle: "Life imagined before it happened.",
     icon: Pencil,
     to: "/wall",
     accentColor: "chapter-coral",
   },
   {
-    title: "Chronicles",
-    subtitle: "A timeline through the chapters of life",
-    icon: Clock,
-    to: "/timeline",
-    accentColor: "chapter-sky",
-  },
-  {
-    title: "Companions",
-    subtitle: "The pets who made everything better",
+    title: "Our Little World",
+    subtitle: "Little reminders of the places we loved",
     icon: Heart,
-    to: "/pets",
-    accentColor: "chapter-rose",
-  },
-  {
-    title: "Reflections",
-    subtitle: "Mood-shifting spaces for quiet thought",
-    icon: Smile,
     to: "/mood",
     accentColor: "chapter-sage",
   },
   {
-    title: "Restricted Area",
-    subtitle: "You probably shouldn't go in here",
-    icon: Lock,
-    to: "/lindsay-only",
-    accentColor: "chapter-lavender",
+    title: "Companions",
+    subtitle: "The pets who made life brighter",
+    icon: Smile,
+    to: "/pets",
+    accentColor: "chapter-rose",
   },
   {
     title: "Research Wing",
@@ -44,6 +30,13 @@ const chapters = [
     icon: Stethoscope,
     to: "/audiology",
     accentColor: "chapter-amber",
+  },
+  {
+    title: "Restricted Area",
+    subtitle: "Proceed at your own risk",
+    icon: Lock,
+    to: "/lindsay-only",
+    accentColor: "chapter-lavender",
   },
 ];
 
@@ -58,7 +51,7 @@ const Index = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight mb-3"
         >
-          Memory Library
+          Inside Lindsay's World
         </motion.h1>
 
         <motion.div

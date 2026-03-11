@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import WorldLayout from "@/components/WorldLayout";
 import Index from "./pages/Index";
 import Sketchbook from "./pages/Sketchbook";
-import Chronicles from "./pages/Chronicles";
+
 import Companions from "./pages/Companions";
 import Reflections from "./pages/Reflections";
 import RestrictedArea from "./pages/RestrictedArea";
@@ -25,7 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/wall" element={<Sketchbook />} />
-            <Route path="/timeline" element={<Chronicles />} />
+            
             <Route path="/pets" element={<Companions />} />
             <Route path="/mood" element={<Reflections />} />
             <Route path="/lindsay-only" element={<RestrictedArea />} />

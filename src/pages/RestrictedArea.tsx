@@ -31,7 +31,7 @@ const RestrictedArea = () => {
       : null;
 
   return (
-    <PageContainer title="Restricted Area" subtitle="You probably shouldn't be here">
+    <PageContainer title="Restricted Area" subtitle="Proceed at your own risk">
       {/* Progressive overlay */}
       <ScreenCrackOverlay damageLevel={damageLevel} />
 
