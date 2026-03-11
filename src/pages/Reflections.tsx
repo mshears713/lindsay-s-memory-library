@@ -2,14 +2,23 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import PageContainer from "@/components/PageContainer";
-import saranacImg from "@/assets/saranac-lake.png";
-import pagosaImg from "@/assets/pagosa-springs.png";
-import cruiseImg from "@/assets/last-cruise.png";
+// @ts-ignore - vite-imagetools query
+import saranacImg from "@/assets/saranac-lake.png?w=1600&format=webp&quality=80";
+// @ts-ignore - vite-imagetools query
+import pagosaImg from "@/assets/pagosa-springs.png?w=1600&format=webp&quality=80";
+// @ts-ignore - vite-imagetools query
+import cruiseImg from "@/assets/last-cruise.png?w=1600&format=webp&quality=80";
+// @ts-ignore - vite-imagetools query
+import saranacFull from "@/assets/saranac-lake.png?w=1600&format=webp&quality=90";
+// @ts-ignore - vite-imagetools query
+import pagosaFull from "@/assets/pagosa-springs.png?w=1600&format=webp&quality=90";
+// @ts-ignore - vite-imagetools query
+import cruiseFull from "@/assets/last-cruise.png?w=1600&format=webp&quality=90";
 
 const memories = [
-  { src: saranacImg, caption: "Where summer kept bringing us back." },
-  { src: pagosaImg, caption: "Where winter finally felt warm." },
-  { src: cruiseImg, caption: "We loved every minute. Aunt Bonnie… less so." },
+  { src: saranacImg as string, full: saranacFull as string, caption: "Where summer kept bringing us back." },
+  { src: pagosaImg as string, full: pagosaFull as string, caption: "Where winter finally felt warm." },
+  { src: cruiseImg as string, full: cruiseFull as string, caption: "We loved every minute. Aunt Bonnie… less so." },
 ];
 
 const Reflections = () => {
@@ -67,7 +76,7 @@ const Reflections = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.92, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              src={memories[lightbox].src}
+              src={memories[lightbox].full}
               alt={memories[lightbox].caption}
               className="max-w-[90vw] max-h-[85vh] rounded-xl shadow-2xl object-contain"
             />
