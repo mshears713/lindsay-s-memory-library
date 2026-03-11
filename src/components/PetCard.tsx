@@ -81,6 +81,8 @@ const PetCard = ({
             <img
               src={image}
               alt={name}
+              loading="lazy"
+              decoding="async"
               style={imagePosition ? { objectPosition: imagePosition } : undefined}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
