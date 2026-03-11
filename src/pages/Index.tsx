@@ -58,7 +58,7 @@ const Index = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight mb-3"
         >
-          Memory Library
+          Inside Lindsay's World
         </motion.h1>
 
         <motion.div
