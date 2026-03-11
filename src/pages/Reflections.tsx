@@ -70,7 +70,7 @@ const Reflections = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.92, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              src={memories[lightbox].src}
+              src={memories[lightbox].full}
               alt={memories[lightbox].caption}
               className="max-w-[90vw] max-h-[85vh] rounded-xl shadow-2xl object-contain"
             />
