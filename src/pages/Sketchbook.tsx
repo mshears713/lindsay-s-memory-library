@@ -158,7 +158,7 @@ const Sketchbook = () => {
               <div className="text-6xl mb-3">🐕</div>
               <p className="font-display text-lg text-card-foreground font-medium">Plot twist.</p>
               <p className="text-sm text-muted-foreground font-light mt-1.5 leading-relaxed">
-                Mike didn't get a chipmunk. He got a dachshund. And honestly? Way better.
+                Mike didn't get a chipmunk. He got a dachshund because Lindsay wouldn't shut up about it.
               </p>
             </div>
           </motion.div>
