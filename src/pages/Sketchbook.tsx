@@ -52,7 +52,7 @@ const hotspots: Hotspot[] = [
     left: "3%",
     width: "45%",
     height: "7%",
-    note: "Buy a House check, destroy a house, check",
+    note: "Buy a house ✓ … with $15k from Dad. You're welcome. 😘",
   },
   {
     id: "mike-chipmunk",
