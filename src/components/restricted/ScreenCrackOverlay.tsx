@@ -312,7 +312,7 @@ const ScreenCrackOverlay = ({ damageLevel }: ScreenCrackOverlayProps) => {
                         </h3>
                         <div className="w-12 h-px bg-chapter-coral/30 mx-auto my-3" />
                         <p className="text-sm text-muted-foreground font-light italic">
-                          — Lindsay, absolutely furious since birth
+                          — Lindsay, passionate since day one
                         </p>
                       </div>
                     </div>
