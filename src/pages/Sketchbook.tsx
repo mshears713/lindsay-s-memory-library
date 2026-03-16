@@ -16,7 +16,7 @@ interface Hotspot {
 const hotspots: Hotspot[] = [
   {
     id: "title",
-    top: "4%",
+    top: "7%",
     left: "5%",
     width: "55%",
     height: "8%",
@@ -52,7 +52,7 @@ const hotspots: Hotspot[] = [
     left: "3%",
     width: "45%",
     height: "7%",
-    note: "Buy a house ✓ … with $15k from Dad. You're welcome. 😘",
+    note: "Buy a house ✓ … thanks to some big help from big brother. 😘",
   },
   {
     id: "mike-chipmunk",

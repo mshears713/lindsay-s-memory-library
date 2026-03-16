@@ -16,9 +16,9 @@ import pagosaFull from "@/assets/pagosa-springs.png?w=1600&format=webp&quality=9
 import cruiseFull from "@/assets/last-cruise.png?w=1600&format=webp&quality=90";
 
 const memories = [
-  { src: saranacImg as string, full: saranacFull as string, caption: "Where summer kept bringing us back." },
-  { src: pagosaImg as string, full: pagosaFull as string, caption: "Where winter finally felt warm." },
   { src: cruiseImg as string, full: cruiseFull as string, caption: "We loved every minute. Aunt Bonnie… less so." },
+  { src: pagosaImg as string, full: pagosaFull as string, caption: "Where winter finally felt warm." },
+  { src: saranacImg as string, full: saranacFull as string, caption: "Where summer kept bringing us back." },
 ];
 
 const Reflections = () => {
