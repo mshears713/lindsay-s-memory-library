@@ -16,7 +16,7 @@ interface Hotspot {
 const hotspots: Hotspot[] = [
   {
     id: "title",
-    top: "4%",
+    top: "7%",
     left: "5%",
     width: "55%",
     height: "8%",
