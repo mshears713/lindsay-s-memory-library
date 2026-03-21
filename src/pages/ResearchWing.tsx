@@ -1,10 +1,21 @@
 import PageContainer from "@/components/PageContainer";
+import researchImg from "@/assets/research-wing.jpg";
 
 const ResearchWing = () => (
   <PageContainer title="Research Wing" subtitle="The professional side of things">
-    <div className="flex items-center justify-center min-h-[40vh] rounded-2xl border border-border bg-card/50">
-      <p className="text-muted-foreground font-light italic">Clinical notes pending…</p>
-    </div>
+    <a
+      href="https://paper-score.onrender.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+    >
+      <img
+        src={researchImg}
+        alt="Lindsay's audiology workspace"
+        className="w-full h-auto object-cover"
+        loading="lazy"
+      />
+    </a>
   </PageContainer>
 );
 
